@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+	
 	<head>
 		<title>Sito in HTML5</title>
 		<meta charset="UTF-8">
@@ -7,13 +8,36 @@
 	</head>
 	<body>
 		<div>
+			
+			<p>The &lt;head&gt; element is a container for metadata. HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+			
 			<b>bold text</b><br />
 			&lt;b&gt;bold text&lt;/b&gt;
 			<h1>heading</h1>
 			&lt;h1&gt;heading&lt;/h1&gt;
 			<h2>heading (smaller)</h2>
-			<p>questo è un paragrafo</p>
+			&lt;h2&gt;heading (smaller)&lt;/h2&gt;
+			<p>Use HTML headings for headings only. Don't use headings to make text BIG or <b>bold</b></p>
+			<p>you can control the heading size with&lt;h1 style="font-size:60px;">Heading 1&lt;/h1&gt;</p>
+			
+			<p>questo è un paragrafo</p><br />
+			&lt;p&gt;questo è un paragrafo&lt;/p&gt;
 			<i>corsivo</i><br />
+			&lt;i&gt;corsivo&lt;/i&gt;<br />
+			
+			<p title="I'm a tooltip">This is a paragraph.</p><br />
+			&lt;p title="I'm a tooltip"&gt;This is a paragraph. If you point it it will show you something.&lt;/p&gt;<br />
+			
+			<pre>
+				My Bonnie lies over the ocean.
+
+				My Bonnie lies over the sea.
+
+				My Bonnie lies over the ocean.
+
+				Oh, bring back my Bonnie to me.
+			</pre>
+			<p>This is a pre element, similar to a paragraph but doesn't ignore next lines, writes text as it is in the code.</p><br />
 			
 			<small>small</small><br />
 			così<br /> si va alla prossima riga
@@ -29,14 +53,98 @@
 				<li>Primo elemento della lista</li>
 				<li>Secondo elemento della lista/li>
 			</ol>
+			<hr /> 
 			
-			attributi:<br />
-			<h2 style="background-color:#ff0000;">La mia amicizia con l'HTML</h2>
+			<h2>attributi:<br /></h2>
+			<h2 style="background-color:#ff0000;">La mia amicizia con l'HTML</h2><br />
 			(setta lo sfondo della scritta a rosso)<br />
 			puoi usare &lt;body style="background-color:#ff0000;"&gt; per cambiare lo sfondo in rosso<br />
 			
+			<p style="color:white">I am a paragraph</p>
+			<hr /> 
+			<a href="https://www.google.com">This is a link</a><br />
+			&lt;a href="https://www.google.com"&gt;This is a link&lt;/a&gt;<br />
+			<p>remember to always use "" when declaring website URLs</p>
+			<p>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes</p>
 			
-			<small> informazioni prese da http://it.html.net/tutorials/html/lesson7.php</small>
+			<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"><br />
+			&lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;<br />
+			
+			<button>Click me</button><br />
+			&lt;button&gt;Click me&lt;/button&gt;<br />
+			<hr /> 
+			
+			<h2>here are some styles</h2><br />
+			<p>I am normal</p>
+			<p style="color:red;">I am red</p>
+			&lt;p style="color:red;"&gt;I am red&lt;/p&gt;
+			<p style="color:blue;">I am blue</p>
+			&lt;p style="color:blue;"&gt;I am blue&lt;/p&gt;
+			<p style="font-size:36px;">I am big</p>
+			&lt;p style="font-size:36px;"&gt;I am big&lt;/p&gt;<br />
+			<p> notice that the browser may add spaces</p>
+			<hr />
+			
+			<h2>here's a list of some text formating</h2>
+			<ul>
+				<li><b>This text is bold</b>&lt;b&gt;&lt;/b&gt;</li>
+				<li><i>This text is italic</i>&lt;i&gt;&lt;/i&gt;</li>
+				<li>This is<sub> subscript</sub> and <sup>superscript</sup>&lt;sub&gt;&lt;/sub&gt;&lt;sup&gt;&lt;/sup&gt;</li>
+				<li>My favorite color is <del>blue</del> red.&lt;del&gt;&lt;/del&gt;</li>
+				<li>My favorite <ins>color</ins> is red.&lt;ins&gt;&lt;/ins&gt;</li>
+				<li>HTML <mark>Marked</mark> Formatting&lt;mark&gt;&lt;/mark&gt;</li>
+				<li><em>This text is emphasized</em>&lt;em&gt;&lt;/em&gt;</li>
+				<li><strong>This text is strong</strong>&lt;strong&gt;&lt;/strong&gt;</li>
+				<li></li>
+			</ul>
+			<hr />
+			
+			<h2>Quotes</h2>
+			<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q>&lt;q&gt;&lt;/q&gt;this is used for quotations</p>
+			
+			<p>Here is a quote from WWF's website:</p>
+			<blockquote cite="http://www.worldwildlife.org/who/index.html">
+			For 50 years, WWF has been protecting the future of nature.
+			The world's leading conservation organization,
+			WWF works in 100 countries and is supported by
+			1.2 million members in the United States and
+			close to 5 million globally.
+			</blockquote>
+			<p>this is used to quote from another website</p>
+			
+			<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;<br />this selects an abreviation for the words and pointing shows the original word</p>
+			
+			<address>
+			Written by John Doe.<br> 
+			Visit us at:<br>
+			Example.com<br>
+			Box 564, Disneyland<br>
+			USA
+			</address>
+			<p>&lt;address&gt;&lt;/address&gt;is used for addressing</p>
+			
+			<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.&lt;cite&gt;&lt;/cite&gt;<br />browsers usually ise italic when cite</p>
+			
+			<p><bdo dir="rtl">This text will be written from right to left</bdo>&lt;bdo dir="rtl"&gt;&lt;/bdo&gt;<br />are used to change the text's direction(left to right in questo caso)</p>
+			<hr />
+			
+			<!-- Write your comments here -->
+			<!-- this is how to comment your HTML file -->
+			<hr />
+			
+			<h2>Colors</h2>
+			<a href="https://www.w3schools.com/colors/colors_names.asp">Here's a website with all supported color names</a><br />
+			<h3 style="background-color:Tomato;">Tomato</h3><p>style="background-color:Tomato;<br /> a simple example of color selection, it can be used with pretty much anything headers paragraphs...</p>
+			<p>style="color:Tomato;" is used to change the text color</p><br />
+			<p>style="border: 2px solid Tomato;" is used to set the border color</p><br />
+			<p>In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values</p><br />
+			<p>rgb(255, 99, 71);#ff6347;hsl(9, 100%, 64%) these are all tomato, you can select the transparency by inserting a value after the others: rgba(255, 99, 71, 0.5);hsla(9, 100%, 64%, 0.5)</p>
+			<a href="https://www.w3schools.com/colors/colors_picker.asp">rgb,hex and hsl color picker </a>
+			
+			
+			<small> informazioni prese da <a href="http://it.html.net/tutorials/html/lesson7.php">http://it.html.net/tutorials/html/lesson7.php</a></small><br />
+			<small> informazioni prese da <a href="https://www.w3schools.com/html/html_styles.asp">https://www.w3schools.com/html/html_styles.asp</a></small><br />
+			<small> informazioni prese da <a href="https://www.w3.org/wiki/HTML/Training">https://www.w3.org/wiki/HTML/Training</a></small><br />
 		</div>
 	</body>
 </html>
