@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h1   {color: blue;}
+			h2	 {color: gold;}
+			h3	 {color: red;}
+			h4   {color: blue;}
+			h6   {color: cornflowerblue; margin-top: 0.67em;margin-bottom: 0.67em;}
+			p    {color: blue;}
+			
+			div.a {
+				position: relative;
+				width: 240px;
+				height: 150px;
+			}
+
+			div.left {
+				float: left;
+				margin: auto;
+				position: absolute;
+				left: auto;
+			} 
+
+			div.c {
+				margin: auto;
+				position: absolute;
+				left: 1000px;
+				width: auto;
+				height: auto;
+			}
+			div.verticalLine {
+				border-left: solid #000000;
+				position: relative;
+				left: 250px;
+				
+			}
+			div.bubble{
+				border-radius: 25px;
+				background: #3366ff;
+				padding: 20px; 
+				width: 90%;
+				height: auto; 
+			}
+			#rcorners1 {
+				border-radius: 25px;
+				background: #3366ff;
+				padding: 20px; 
+				width: 90%;
+				height: auto;    
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="left"><h1><i>Romanzi e Racconti</i></h1></div><br />
+		<div class="c" style="display:table;" align="right">
+			<table>
+				<tr>
+					<td>
+						<h6>Cerca libri e romanzi...</h6>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="searchBox" value="" align="left">
+					</td>
+					<td>
+						<button onclick="find()">find</button>
+					</td>
+				</tr>
+			</table>
+		</div><br><br><br><hr>
+		<div class="a"><p>Romanzi e Racconti è semplicemente una base dati di romanzi e racconti. Puoi aggiungere i libri che ti piacciono, recensirli, etichettarli e condividerli. E puoi andare a vedere che cosa piace agli altri.</p></div>
+		<hr  width="20%" align="left">
+		<div class="a">
+			<table>
+				<tr>
+					<h2>Chi sei?</h2>
+				</tr>
+				<tr>
+					<td>
+						<h6>username</h6>
+					</td>
+					<td>
+						<input type="text" id="unBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h6>password</h6>
+					</td>
+					<td>
+						<input type="text" id="pwBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<a href="">forgot password</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<button onclick="signIn()">sign in</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<br><hr  width="20%" align="left">
+		<div class="a">
+			<table>
+				<tr>
+					<h2>registrati!</h2>
+				</tr>
+				<tr>
+					<td>
+						<h6>username</h6>
+					</td>
+					<td>
+						<input type="text" id="unBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h6>password</h6>
+					</td>
+					<td>
+						<input type="text" id="pwBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div><h6>password repeated</h6></div>
+					</td>
+					<td>
+						<input type="text" id="pwRepBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h6>email</h6>
+					</td>
+					<td>
+						<input type="text" id="emailBox" value="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<input type="checkbox" id="iAgree">
+						I agree to the Terms of Use.</a
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<button onclick="signUp()">sign up</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="verticalLine">
+			<div class="bubble">
+				<table>
+					<tr>
+						<td>Scopri</td><td></td>
+						<td>cerca nella base dati per titolo, autore...</td><td></td>
+						<td><input type="text" id="frugaLibro" value=""></td><td><button onclick="fruga()">fruga</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
