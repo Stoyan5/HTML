@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 	<head>
 		<title>TODO supply a title</title>
@@ -9,22 +9,35 @@
 			h2	 {color: gold;}
 			h3	 {color: red;}
 			h4   {color: blue;}
+			h5	 {color: white; font-size: 30px; height: 1px}
 			h6   {color: cornflowerblue; margin-top: 0.67em;margin-bottom: 0.67em;}
 			p    {color: blue;}
 			
+			a:link {text-decoration: none;}
+			a:visited {text-decoration: none;}
+			a:hover {text-decoration: none;}
+			a:active {text-decoration: none;}
+			div{
+				margin: 10px;
+			}
 			div.a {
 				position: relative;
 				width: 240px;
 				height: 150px;
 			}
-
 			div.left {
 				float: left;
 				margin: auto;
 				position: absolute;
 				left: auto;
 			} 
-
+			div.rightClose{
+				float: right;
+				margin: auto;
+				position: absolute;
+				left: auto;
+				clear: right;
+			}
 			div.c {
 				margin: auto;
 				position: absolute;
@@ -32,152 +45,179 @@
 				width: auto;
 				height: auto;
 			}
-			div.verticalLine {
-				border-left: solid #000000;
-				position: relative;
-				left: 250px;
-				
+			div.vl {
+				border-left: 1px solid black;
+				position: absolute;
+				left: 25%;
+				margin-left: -3px;
+				top: 22%;
 			}
 			div.bubble{
 				border-radius: 25px;
 				background: #3366ff;
-				padding: 20px; 
-				width: 90%;
+				padding: 10px; 
+				width: 95%;
 				height: auto; 
-			}
-			#rcorners1 {
-				border-radius: 25px;
-				background: #3366ff;
-				padding: 20px; 
-				width: 90%;
-				height: auto;    
+				margin: 15px;
 			}
 		</style>
 	</head>
 	
 	<body>
-		<div class="left"><h1><i>Romanzi e Racconti</i></h1></div><br />
-		<div class="c" style="display:table;" align="right">
-			<table>
-				<tr>
-					<td>
-						<h6>Cerca libri e romanzi...</h6>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<input type="text" id="searchBox" value="" align="left">
-					</td>
-					<td>
-						<button onclick="find()">find</button>
-					</td>
-				</tr>
-			</table>
-		</div><br><br><br><hr>
-		<div class="a"><p>Romanzi e Racconti è semplicemente una base dati di romanzi e racconti. Puoi aggiungere i libri che ti piacciono, recensirli, etichettarli e condividerli. E puoi andare a vedere che cosa piace agli altri.</p></div>
-		<hr  width="20%" align="left">
-		<div class="a">
-			<table>
-				<tr>
-					<h2>Chi sei?</h2>
-				</tr>
-				<tr>
-					<td>
-						<h6>username</h6>
-					</td>
-					<td>
-						<input type="text" id="unBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h6>password</h6>
-					</td>
-					<td>
-						<input type="text" id="pwBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					</td>
-					<td>
-						<a href="">forgot password</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-					</td>
-					<td>
-						<button onclick="signIn()">sign in</button>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<br><hr  width="20%" align="left">
-		<div class="a">
-			<table>
-				<tr>
-					<h2>registrati!</h2>
-				</tr>
-				<tr>
-					<td>
-						<h6>username</h6>
-					</td>
-					<td>
-						<input type="text" id="unBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h6>password</h6>
-					</td>
-					<td>
-						<input type="text" id="pwBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div><h6>password repeated</h6></div>
-					</td>
-					<td>
-						<input type="text" id="pwRepBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h6>email</h6>
-					</td>
-					<td>
-						<input type="text" id="emailBox" value="">
-					</td>
-				</tr>
-				<tr>
-					<td>
-					</td>
-					<td>
-						<input type="checkbox" id="iAgree">
-						I agree to the Terms of Use.</a
-					</td>
-				</tr>
-				<tr>
-					<td>
-					</td>
-					<td>
-						<button onclick="signUp()">sign up</button>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="verticalLine">
-			<div class="bubble">
+		<!--Title and search-->
+		<div>
+			<div class="left"><h1><i>Romanzi e Racconti</i></h1></div><br />
+			<div class="c" style="display:table;" align="right">
 				<table>
 					<tr>
-						<td>Scopri</td><td></td>
-						<td>cerca nella base dati per titolo, autore...</td><td></td>
-						<td><input type="text" id="frugaLibro" value=""></td><td><button onclick="fruga()">fruga</button></td>
+						<td>
+							<h6>Cerca libri e romanzi...</h6>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" id="searchBox" value="" align="left">
+						</td>
+						<td>
+							<button onclick="find()">find</button>
+						</td>
 					</tr>
 				</table>
+			</div><br><br><br><hr>
+		</div>
+		<!--left side-->
+		<div>
+			<div class="a"><p>Romanzi e Racconti è semplicemente una base dati di romanzi e racconti. Puoi aggiungere i libri che ti piacciono, recensirli, etichettarli e condividerli. E puoi andare a vedere che cosa piace agli altri.</p></div>
+			<hr  width="20%" align="left">
+			<div class="a">
+				<table>
+					<tr>
+						<h2>Chi sei?</h2>
+					</tr>
+					<tr>
+						<td>
+							<h6>username</h6>
+						</td>
+						<td>
+							<input type="text" id="unBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h6>password</h6>
+						</td>
+						<td>
+							<input type="text" id="pwBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<a href="">forgot password</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<button onclick="signIn()">sign in</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<br><hr  width="20%" align="left">
+			<div class="a">
+				<table>
+					<tr>
+						<h2>registrati!</h2>
+					</tr>
+					<tr>
+						<td>
+							<h6>username</h6>
+						</td>
+						<td>
+							<input type="text" id="unBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h6>password</h6>
+						</td>
+						<td>
+							<input type="text" id="pwBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div><h6>password repeated</h6></div>
+						</td>
+						<td>
+							<input type="text" id="pwRepBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h6>email</h6>
+						</td>
+						<td>
+							<input type="text" id="emailBox" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<input type="checkbox" id="iAgree">
+							I agree to the Terms of Use.</a
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<button onclick="signUp()">sign up</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--center right-->
+		<div class="vl">
+			<div class="bubble">
+				<h5>Scopri</h5>
+				<h2>cerca nella base dati per titolo, autore...</h2>
+				<input type="text" id="frugaLibro" value=""></td><td><button onclick="fruga()">fruga</button>
+			</div>
+			<div margin: 10px;>
+				<h4>Esplora</h4>
+				<p>
+				<a href="">Libri aggiornati di recente</a> | <a href="">Tag popolari</a> | <a href="">Libri consigliati</a>
+				</p>
+				<table>
+					<tr>
+						<td>
+							<h3>Tom De Marco, Timothy Lister: Peopleware</h3>
+							<p>scifi, action, sci-fi, lucas, great, space, starwars, adenture, boring, sequel, ...</p>
+						</td>
+						<td>
+							<h3>Douglas Coupland, Eleanor Rigby</h3>
+							<p>drugs, drama, weird, addiction, love, drug, ignorant, bliss, tragic, morale, ...</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3>J.R.R. Tolkien, Ilsignore degli anelli</h3>
+							<p>drama, prison, thrieller, quality, over-rated, injutice, added, jailbreak, this, escape, ...</p>
+						</td>
+						<td>
+							<h3>C.S. Lewis, Lontano dal pianeta silenzioso</h3>
+							<p>pirates, action, adventure, comedy, depp, fantasy, pirate, curse, jack, caribbean, ...</p>
+						</td>
+					</tr>
+				</table>
+				
 			</div>
 		</div>
 	</body>
