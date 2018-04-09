@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>TODO supply a title</title>
@@ -6,12 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 			h1   {color: blue;}
-			h2	 {color: gold;}
+			h2	 {color: gold; margin: 1px;padding: 1px;}
 			h3	 {color: red;}
 			h4   {color: blue;}
 			h5	 {color: white; font-size: 30px; height: 1px}
 			h6   {color: cornflowerblue; margin-top: 0.67em;margin-bottom: 0.67em;}
-			p    {color: blue;}
+			p    {color: blue; padding: 1px; margin: 1px;}
 			
 			a:link {text-decoration: none;}
 			a:visited {text-decoration: none;}
@@ -22,8 +22,10 @@
 			}
 			div.a {
 				position: relative;
-				width: 240px;
-				height: 150px;
+				width: 18%;
+				height: 20%;
+				padding: 1px;
+				margin: 1px;
 			}
 			div.left {
 				float: left;
@@ -48,24 +50,32 @@
 			div.vl {
 				border-left: 1px solid black;
 				position: absolute;
-				left: 25%;
+				left: 21.5%;
 				margin-left: -3px;
-				top: 22%;
+				top: 12%;
 			}
 			div.bubble{
 				border-radius: 25px;
 				background: #3366ff;
-				padding: 10px; 
+				padding: 5px; 
 				width: 95%;
-				height: auto; 
+				height: auto;
 				margin: 15px;
+			}
+			footer{
+				position: absolute;
+				top: 102%;
+			}
+			table, th, td {
+				margin: 1px;
+				padding: 1px;
 			}
 		</style>
 	</head>
 	
 	<body>
 		<!--Title and search-->
-		<div>
+		<header>
 			<div class="left"><h1><i>Romanzi e Racconti</i></h1></div><br />
 			<div class="c" style="display:table;" align="right">
 				<table>
@@ -85,9 +95,9 @@
 					</tr>
 				</table>
 			</div><br><br><br><hr>
-		</div>
+		</header>
 		<!--left side-->
-		<div>
+		<aside>
 			<div class="a"><p>Romanzi e Racconti è semplicemente una base dati di romanzi e racconti. Puoi aggiungere i libri che ti piacciono, recensirli, etichettarli e condividerli. E puoi andare a vedere che cosa piace agli altri.</p></div>
 			<hr  width="20%" align="left">
 			<div class="a">
@@ -135,7 +145,7 @@
 					</tr>
 					<tr>
 						<td>
-							<h6>username</h6>
+							<center><h6>username</h6></center>
 						</td>
 						<td>
 							<input type="text" id="unBox" value="">
@@ -143,7 +153,7 @@
 					</tr>
 					<tr>
 						<td>
-							<h6>password</h6>
+							<center><h6>password</h6></center>
 						</td>
 						<td>
 							<input type="text" id="pwBox" value="">
@@ -151,7 +161,7 @@
 					</tr>
 					<tr>
 						<td>
-							<div><h6>password repeated</h6></div>
+							<center><h6>password repeated</h6></center>
 						</td>
 						<td>
 							<input type="text" id="pwRepBox" value="">
@@ -159,7 +169,7 @@
 					</tr>
 					<tr>
 						<td>
-							<h6>email</h6>
+							<center><h6>email</h6></center>
 						</td>
 						<td>
 							<input type="text" id="emailBox" value="">
@@ -182,7 +192,7 @@
 					</tr>
 				</table>
 			</div>
-		</div>
+		</aside>
 		<!--center right-->
 		<div class="vl">
 			<div class="bubble">
@@ -190,26 +200,26 @@
 				<h2>cerca nella base dati per titolo, autore...</h2>
 				<input type="text" id="frugaLibro" value=""></td><td><button onclick="fruga()">fruga</button>
 			</div>
-			<div margin: 10px;>
+			<div margin=10px>
 				<h4>Esplora</h4>
 				<p>
 				<a href="">Libri aggiornati di recente</a> | <a href="">Tag popolari</a> | <a href="">Libri consigliati</a>
 				</p>
-				<table>
+				<table border="1" frame="void" rules="all" cellpadding="10">
 					<tr>
 						<td>
 							<h3>Tom De Marco, Timothy Lister: Peopleware</h3>
 							<p>scifi, action, sci-fi, lucas, great, space, starwars, adenture, boring, sequel, ...</p>
 						</td>
 						<td>
-							<h3>Douglas Coupland, Eleanor Rigby</h3>
-							<p>drugs, drama, weird, addiction, love, drug, ignorant, bliss, tragic, morale, ...</p>
+							<h3>J.R.R. Tolkien, Ilsignore degli anelli</h3>
+							<p>drama, prison, thrieller, quality, over-rated, injutice, added, jailbreak, this, escape, ...</p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3>J.R.R. Tolkien, Ilsignore degli anelli</h3>
-							<p>drama, prison, thrieller, quality, over-rated, injutice, added, jailbreak, this, escape, ...</p>
+							<h3>Douglas Coupland, Eleanor Rigby</h3>
+							<p>drugs, drama, weird, addiction, love, drug, ignorant, bliss, tragic, morale, ...</p>
 						</td>
 						<td>
 							<h3>C.S. Lewis, Lontano dal pianeta silenzioso</h3>
@@ -220,5 +230,10 @@
 				
 			</div>
 		</div>
+		<footer>
+			<hr>
+			<a href="">about</a> | <a href="">rss</a> | <a href="">immagine</a> | <a href="">terms of use</a> | <a href="">contact us</a>
+			<hr>
+		</footer>
 	</body>
 </html>
