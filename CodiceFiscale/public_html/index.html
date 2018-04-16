@@ -6,7 +6,20 @@ and open the template in the editor.
 -->
 <html>
 	<head>
-		<title>TODO supply a title</title>
+		<style>
+			div.title{
+				margin-top: 50px;
+				text-align: center;
+			}
+			div.data{
+				margin-left: 10%;
+				margin-right: 10%;
+			}
+			th.ex{
+				width: 10%;
+			}
+		</style>
+		<title>Codice Fiscale</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -181,8 +194,8 @@ and open the template in the editor.
 					case "Noale":
 						codice.concat("F904");
 						break;
-					case "Noventa di Piave"");
-						codice.concat("F963;
+					case "Noventa di Piave":
+						codice.concat("F963");
 						break;
 					case "Pianiga":
 						codice.concat("G565");
@@ -236,168 +249,168 @@ and open the template in the editor.
 				return codice;
 			}//errore senza senso
 			function findCIN(){
-				pd=true //true=dispari false=pari
+				pd=true; //true=dispari false=pari
 				num=0;
 				for(i=0;i<15;i++){
 					if(pd){
 						switch (outCF.charAt(i)){
-							case A|0;
-								num=num+1
+							case A|0:
+								num=num+1;
 								break;
-							case B|1
+							case B|1:
 								num=num+0;
 								break;
-							case C|2;
+							case C|2:
 								num=num+5;
 								break;
-							case D|3;
+							case D|3:
 								num=num+7;
 								break;
-							case E|4;
+							case E|4:
 								num=num+9;
 								break;
-							case F|5;
+							case F|5:
 								num=num+13;
 								break;
-							case G|6;
+							case G|6:
 								num=num+15;
 								break;
-							case H|7;
+							case H|7:
 								num=num+17;
 								break;
-							case I|8;
+							case I|8:
 								num=num+19;
 								break;
-							case J|9;
+							case J|9:
 								num=num+21;
 								break;
-							case K;
+							case K:
 								num=num+2;
 								break;
-							case L;
+							case L:
 								num=num+4;
 								break;
-							case M;
+							case M:
 								num=num+18;
 								break;
-							case N;
+							case N:
 								num=num+20;
 								break;
-							case O;
+							case O:
 								num=num+11;
 								break;
-							case P;
+							case P:
 								num=num+3;
 								break;
-							case Q;
+							case Q:
 								num=num+6;
 								break;
-							case R;
+							case R:
 								num=num+8;
 								break;
-							case S;
+							case S:
 								num=num+12;
 								break;
-							case T;
+							case T:
 								num=num+14;
 								break;
-							case U;
+							case U:
 								num=num+16;
 								break;
-							case V;
+							case V:
 								num=num+10;
 								break;
-							case W;
+							case W:
 								num=num+22;
 								break;
-							case X;
+							case X:
 								num=num+25;
 								break;
-							case Y;
+							case Y:
 								num=num+24;
 								break;
-							case Z;
+							case Z:
 								num=num+23;
 								break;
 						}
 					}else{
 						switch (outCF.charAt(i)){
-							case A|0;
+							case A|0:
 								num=num+0;
 								break;
-							case B|1
+							case B|1:
 								num=num+1;
 								break;
-							case C|2;
+							case C|2:
 								num=num+2;
 								break;
-							case D|3;
+							case D|3:
 								num=num+3;
 								break;
-							case E|4;
+							case E|4:
 								num=num+4;
 								break;
-							case F|5;
+							case F|5:
 								num=num+5;
 								break;
-							case G|6;
+							case G|6:
 								num=num+6;
 								break;
-							case H|7;
+							case H|7:
 								num=num+7;
 								break;
-							case I|8;
+							case I|8:
 								num=num+8;
 								break;
-							case J|9;
+							case J|9:
 								num=num+9;
 								break;
-							case K;
+							case K:
 								num=num+10;
 								break;
-							case L;
+							case L:
 								num=num+11;
 								break;
-							case M;
+							case M:
 								num=num+12;
 								break;
-							case N;
+							case N:
 								num=num+13;
 								break;
-							case O;
+							case O:
 								num=num+14;
 								break;
-							case P;
+							case P:
 								num=num+15;
 								break;
-							case Q;
+							case Q:
 								num=num+16;
 								break;
-							case R;
+							case R:
 								num=num+17;
 								break;
-							case S;
+							case S:
 								num=num+18;
 								break;
-							case T;
+							case T:
 								num=num+19;
 								break;
-							case U;
+							case U:
 								num=num+20;
 								break;
-							case V;
+							case V:
 								num=num+21;
 								break;
-							case W;
+							case W:
 								num=num+22;
 								break;
-							case X;
+							case X:
 								num=num+23;
 								break;
-							case Y;
+							case Y:
 								num=num+24;
 								break;
-							case Z;
+							case Z:
 								num=num+25;
 								break;
 						}
@@ -407,18 +420,121 @@ and open the template in the editor.
 				return alpha[num];
 			}
 			function main() {
+				nome = document.getElementById("nameButton").value
+				cognome = document.getElementById("surnameButton").value;
+				dNascita = document.getElementById("dateButton").value;
+				
 				outCF = outCF.concat(findConsCog());
 				outCF = outCf.concat(findConsNome());
-				if (sesso == true)
+				if (sesso === true){
 					outCF = outCF.concat(dNascita.getDay().toString());
-				else
+				}else{
 					oufCF = outCF.concat((dNascita.getDay() + 40).toString());
-				outCF = coutCF.concat(findMonth());
-				outCF=outCF.concat(findCodiceComune());
-				OUTcf=outCF.concat(findCIN());
+					outCF = coutCF.concat(findMonth());
+					outCF=outCF.concat(findCodiceComune());
+					OUTcf=outCF.concat(findCIN());
+				}
+			}
+			function setName(){
+				this.name=name;
+			}
+			function setSurname(){
+				this.cognome=cognome;
+			}
+			function setDate(){
+				this.dNascita=dNascita;
 			}
 
-
 		</script>
+		<header>
+			<div class="title">Generatore di Codice Fiscale</div><br />
+			<hr>
+			
+		</header>
+		<article>
+					<div class="data">
+						<table>
+							<tr>
+								<td><h2>Nome</h2></td>
+								<td><input type="text" id="nameButton"></td>
+							</tr>
+							<tr>
+								<td><h2>Cognome</h2></td>
+								<td><input type="text" id="surnameButton"></td>
+							</tr>
+							<tr>
+								<td><h2>Data di nascita</h2></td>
+								<td><input type="date" id="dateButton"></td>
+							</tr>
+							<tr>
+								<td><h2>Luogo di nascita</h2></td>
+								<td>
+									<select>
+										<option value="Veneto">Veneto</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><h2>Sesso</h2></td>
+								<td>
+									Maschio<input type="checkbox" id="male">
+									Femmina<input type="checkbox" id="female">
+								</td>
+							</tr>
+							<tr>
+								<td><h2>Comune</h2></td>
+								<td>
+									<select>
+										<option value="Annone Veneto">Annone Veneto</option>
+										<option value="Campagna Lupia">Campagna Lupia</option>
+										<option value="Campolongo Maggiore">Campolongo Maggiore</option>
+										<option value="Camponogara">Camponogara</option>
+										<option value="Caorle">Caorle</option>
+										<option value="Cavallino-Treporti">Cavallino-Treporti</option>
+										<option value="Cavarzere">Cavarzere</option>
+										<option value="Ceggia">Ceggia</option>
+										<option value="Chioggia">Chioggia</option>
+										<option value="Cinto Caomaggiore">Cinto Caomaggiore</option>
+										<option value="Cona">Cona</option>
+										<option value="Concordia Sagittaria">Concordia Sagittaria</option>
+										<option value="Dolo">Dolo</option>
+										<option value="Eraclea">Eraclea</option>
+										<option value="Fiesso d'Artico">Fiesso d'Artico</option>
+										<option value="Fossalta di Piave">Fossalta di Piave</option>
+										<option value="Fossalta di Portogruaro">Fossalta di Portogruaro</option>
+										<option value="Fossò">Fossò</option>
+										<option value="Gruaro">Gruaro</option>
+										<option value="Jesolo">Jesolo</option>
+										<option value="Marcon">Marcon</option>
+										<option value="Martellago">Martellago</option>
+										<option value="Meolo">Meolo</option>
+										<option value="Mira">Mira</option>
+										<option value="Mirano">Mirano</option>
+										<option value="Musile di Piave">Musile di Piave</option>
+										<option value="Noale">Noale</option>
+										<option value="Noventa di Piave">Noventa di Piave</option>
+										<option value="Pianiga">Pianiga</option>
+										<option value="Portogruaro">Portogruaro</option>
+										<option value="Pramaggiore">Pramaggiore</option>
+										<option value="Quarto d'Altino">Quarto d'Altino</option>
+										<option value="Salzano">Salzano</option>
+										<option value="San Donà di Piave">San Donà di Piave</option>
+										<option value="San Michele al Tagliamento">San Michele al Tagliamento</option>
+										<option value="Santa Maria di Sala">Santa Maria di Sala</option>
+										<option value="Santo Stino di Livenza">Santo Stino di Livenza</option>
+										<option value="Scorzè">Scorzè</option>
+										<option value="Spinea">Spinea</option>
+										<option value="Stra">Stra</option>
+										<option value="Teglio Veneto">Teglio Veneto</option>
+										<option value="Torre di Mosto">Torre di Mosto</option>
+										<option value="Venezia">Venezia</option>
+										<option value="Vigonovo">Vigonovo</option>
+									</select>
+								</td>
+							</tr>
+							<th class="ex"><input type="button" id="runMain"></th>
+						</table>
+					</div>
+		</article>
 	</body>
 </html>
