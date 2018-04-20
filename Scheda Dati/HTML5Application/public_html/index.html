@@ -32,38 +32,49 @@
 	<body>
 		<script>
 			function hasSurname() {
-				if (document.getElementById(surnameButton).value === null)
+				var surnameT=true;
+				if (document.getElementById(surnameButton).value === null){
 					document.getElementById("snPopup").classList.toggle("show");
-				else 
+					surnameT=false;
+				}
+				return surnameT;
 			}
 			function hasName() {
-				if (document.getElementById(nameButton).value === null)
+				var nameT=true;
+				if (document.getElementById(nameButton).value === null){
 					document.getElementById("nPopup").classList.toggle("show");
+					nameT=false;
+				}
+				return nameT;
 			}
 			function hasMatricola() {
-				if (document.getElementById(matricolaButton).value === null)
+				matricolaT=true;
+				if (document.getElementById(matricolaButton).value === null){
 					document.getElementById("mPopup").classList.toggle("show");
+					matricolaT=false;
+				}
+				return matricolaT;
 			}
 			function hasRegion() {
-				if (document.getElementById(regionSelect).value === null)
+				regionT=true;
+				if (document.getElementById(regionSelect).value === null){
 					document.getElementById("rPopup").classList.toggle("show");
+					regionT=false;
+				}
+				return regionT;
 			}
 			function hasContact(){
-				contact=true;
+				var contactT=true;
 				if(document.getElementById(emailAddress).value===null&&document.getElementById(phoneN).value===null){
 					document.getElementById("ePopup").classList.toggle("show");
 					document.getElementById("pPopup").classList.toggle("show");
-					contact=false;
+					contactT=false;
 				}
 			}
 			function submit(){
-				surnameT=true;
-				nameT=true;
-				matricolaT=true;
-				regionT=true;
-				contactT=true;
-				
-				if()
+				if(hasSurname()&&hasName()&&hasMatricola&&hasRegion()&&hasContact()){
+					
+				}
 			}
 		</script>
 		<table>
