@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td><h2>Cognome e Nome</h2></td>
+        <td>
+            <input type="text" name="CognomeNome" id="nameD" maxlength="50" oninput="nameCheck()">
+        </td>
+    </tr>
+    <tr>
+        <td><h2>Sesso</h2></td>
+        <td>
+            Maschio<input type="checkbox" id="male" onClick="setMale()">
+            Femmina<input type="checkbox" id="female" onclick="setFemale()">
+        </td>
+    </tr>
+    <tr>
+        <td><h2>Ateneo</h2></td>
+        <td>
+            <select id="univercitySelect" onchange="nullCheck()">
+                <option value=null></option>
+                <option value="StudiPadova">Università degli studi di Padova</option>
+                <option value="StudiUdine">Università degli studi di Udine</option>
+                <option value="CaFoscari">Università "Cà Foscari" Venezia</option>
+                <option value="IUAV">Università IUAV di Venezia</option>
+                <option value="StudiVerona">Università degli studi di Verona</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><h2>CAP</h2></td>
+        <td>
+            CAP<input id="cap" type="text" maxlength="5" oninput="checkCAP">
+        </td>
+    </tr>
+    <tr>
+        <td><h2>Studente Lavoratore</h2></td>
+        <td>
+            <input type="checkbox" id="lavoro" onClick="setLavoro()">
+        </td>
+    </tr>
+    <tr>
+        <td><h2>Descrizione lavoro svolto</h2></td>
+        <td><input id="lavoroSvolto" type="text" maxlength="80"></td>
+    </tr>
+    <tr>
+        <td><button name="Submit" id="submit" onClick="submit()">Submit</button></td>
+        <td><button name="reset" id="reset" onclick="reset()">Reset</button></td>
+    </tr>
+</table>
+<script>
+    let sesso=0;
+    let lavoro;
+    function nameCheck(){
+        for (i = 0; i < name.length; i++) {
+            if (document.getElementById("nameD").charAt(i) == '1' || document.getElementById("nameD").charAt(i) == '2' || document.getElementById("nameD").charAt(i) == '3' || document.getElementById("nameD").charAt(i) == '4' || document.getElementById("nameD").charAt(i) == '5' || document.getElementById("nameD").charAt(i) == '6' || document.getElementById("nameD").charAt(i) == '7' || document.getElementById("nameD").charAt(i) == '8' || document.getElementById("nameD").charAt(i) == '9' || document.getElementById("nameD").charAt(i) == '0') {
+                alert("Cognome e nome contengono numero");
+                break;
+            }
+        }
+    }
+    function checkCAP() {
+        if(document.getElementById("cap").length<5){alert("CAP incompleto")}
+    }
+    function nullCheck() {
+        if(document.getElementById("univercitySelect").valueOf()!=null)return true;
+    }
+    function setMale() {
+        if(document.getElementById("female").checked)document.getElementById("female").checked=false;
+        sesso=1;
+    }
+    function setFemale(){
+        if(document.getElementById("male").checked)document.getElementById("male").checked=false;
+        sesso=-1;
+    }
+    function setLavoro(lavoro) {
+        lavoro=document.getElementById("lavoroSvolto").value;
+    }
+    function submit() {
+        if(checkCAP()&&sexSelected()&&checkNameLength()){
+            alert("successo");
+        }
+    }
+    function reset() {
+        sesso=0;
+        lavoro="";
+
+        document.getElementById("nameD").setText("");
+        document.getElementById("univercitySelect").value=null;
+        document.getElementById("female").checked=false;
+        document.getElementById("male").checked=false;
+        document.getElementById("cap").value="";
+        setLavoro("");
+        document.getElementById("lavoroSvolto").value="";
+    }
+    function checkNameLength() {
+        return document.getElementById("nameD").length>0;
+    }
+    function sexSelected(){
+        if(sesso==1||sesso==-1){return true}
+    }
+</script>
+</body>
+</html>
