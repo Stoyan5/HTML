@@ -33,7 +33,7 @@
 		<script>
 			function hasSurname() {
 				var surnameT=true;
-				if (document.getElementById(surnameButton).value === null){
+				if (document.getElementById(surnameButton).value === none){
 					document.getElementById("snPopup").classList.toggle("show");
 					surnameT=false;
 				}
@@ -41,7 +41,7 @@
 			}
 			function hasName() {
 				var nameT=true;
-				if (document.getElementById(nameButton).value === null){
+				if (document.getElementById(nameButton).value === none){
 					document.getElementById("nPopup").classList.toggle("show");
 					nameT=false;
 				}
@@ -49,7 +49,7 @@
 			}
 			function hasMatricola() {
 				matricolaT=true;
-				if (document.getElementById(matricolaButton).value === null){
+				if (document.getElementById(matricolaButton).value === none){
 					document.getElementById("mPopup").classList.toggle("show");
 					matricolaT=false;
 				}
@@ -57,7 +57,7 @@
 			}
 			function hasRegion() {
 				regionT=true;
-				if (document.getElementById(regionSelect).value === null){
+				if (document.getElementById(regionSelect).value === none){
 					document.getElementById("rPopup").classList.toggle("show");
 					regionT=false;
 				}
@@ -65,7 +65,7 @@
 			}
 			function hasContact(){
 				var contactT=true;
-				if(document.getElementById(emailAddress).value===null&&document.getElementById(phoneN).value===null){
+				if(document.getElementById(emailAddress).value===none&&document.getElementById(phoneN).value===null){
 					document.getElementById("ePopup").classList.toggle("show");
 					document.getElementById("pPopup").classList.toggle("show");
 					contactT=false;
@@ -73,8 +73,18 @@
 			}
 			function submit(){
 				if(hasSurname()&&hasName()&&hasMatricola&&hasRegion()&&hasContact()){
-					
+					alert("Success!");
 				}
+			}
+			function reset(){
+				surnameButton.setText("");
+				surnameButton.value="";
+				nameButton.setText("");
+				nameButton.value="";
+				matricolaButton.setText("");
+				matricolaButton.value="";
+				regionSelect.value=null;
+				
 			}
 		</script>
 		<table>
