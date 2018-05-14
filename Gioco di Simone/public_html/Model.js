@@ -5,6 +5,7 @@
 	var TEMPO_ATTESA;
 	var TEMPO_DI_GIOCO;
 	var PADS;//array with length number of pads
+	var sequence;//array della sequenza presente
 	
 	//Buttons
 	var btnRed = document.getElementById("redDot");
@@ -19,9 +20,14 @@
 	PADS=[btnRed, btnGreen, btnBlue];//red, green, blue
 	function lightPad(pad){
 		if(pad==PADS[0]){
-			//light red
+			//light red,wait half a sec, turn light off, save value in array with length N
+			btnRed.style.color="red";
+			setTimeout(function(){
+				btnRed.style.color="black"
+			}, 2000);
 		}else if(pad=PADS[1]){
-			//light green
+			
+	//light green
 		}else{
 			//light blue
 		}
