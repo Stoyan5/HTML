@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form name="bmi" action="">
+      <table width="96%" class="tabella imgcenter">
+        <tbody>
+        <tr>
+          <td width="135" bgcolor="#F7F7FB">
+            Altezza</td>
+          <td width="463" bgcolor="#F7F7FB">
+            
+            <input onfocus="bmiclear()" size="5" name="height" style="background-color: #DEF7FF"> 
+            centimetri         </td>
+          </tr>
+        <tr>
+          <td bgcolor="#F7F7FB">Peso</td>
+          <td bgcolor="#F7F7FB"><input onfocus="bmiclear()" size="5" name="weight" style="background-color: #DEF7FF">
+            Kg</td>
+          </tr>
+        <tr>
+          <td bgcolor="#F7F7FB">Sesso</td>
+          <td bgcolor="#F7F7FB"><select onfocus="bmiclear()" name="sex" size="1">
+            <option value="Maschio" selected="selected">Maschio</option>
+            <option value="Femmina">Femmina</option>
+          </select></td>
+          </tr>
+        <tr>
+          <td colspan="2" bgcolor="#F7F7FB"><input name="Button2" type="button" class="Stile1" onclick="bmicalculate()" value="Calcola BMI"></td>
+          </tr>
+        <tr>
+          <td bgcolor="#F0F7FA">IL TUO BMI è </td>
+          <td bgcolor="#F0F7FA"><input size="5" name="bmi">
+            kg/m<sup>2</sup>
+            </td>
+          </tr>
+        <tr>
+          <td bgcolor="#F7F7FB">ed è</td>
+          <td bgcolor="#F7F7FB"><input onfocus="bmiclear()" style="width:175px" name="result"></td>
+          </tr>
+        <tr>
+          <td colspan="2" bgcolor="#F7F7FB">Il Tuo Peso Forma secondo il  BMI è compreso tra:</td>
+          </tr>
+        <tr>
+          <td bgcolor="#F7F7FB"><input size="5" name="bmi2"></td>
+          <td bgcolor="#F7F7FB">Kg</td>
+          </tr>
+        <tr>
+          <td colspan="2" bgcolor="#F7F7FB">e:</td>
+          </tr>
+        <tr>
+          <td bgcolor="#F7F7FB"><input size="5" name="bmi3"></td>
+          <td bgcolor="#F7F7FB">Kg</td>
+    </tr></tbody></table>
+   </form>
+	</body>
+</html>
