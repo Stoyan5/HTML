@@ -58,3 +58,211 @@
 			};
 		}(g.fx), g.fx = b);
 })(this);
+function convert(fromValue,toValue){
+	temporaryValue=toEuro(fromValue).toNew(toValue);
+	
+}
+function toEuro(fromValue){
+	switch(fromValue) {
+    case AUD:
+        return fromValue*0.64102;
+        break;
+    case BRL:
+        return fromValue*0.22792;
+        break;
+	case GBP:
+        return fromValue*1.14225;
+        break;
+	case CAD:
+        return fromValue*0.66256;
+        break;
+	case CLP:
+        return fromValue*0.00134;
+        break;
+	case CNY:
+        return fromValue*0.13337;
+        break;
+    case CZK:
+        return fromValue*0.03899;
+        break;
+	case DKK:
+        return fromValue*0.13428;
+        break;
+	case EUR:
+        return fromValue;
+        break;
+	case HKD:
+        return fromValue*0.10855;
+        break;
+	case HUF:
+        return fromValue*0.00314;
+        break;
+    case INR:
+        return fromValue*0.01252;
+        break;
+	case IDR:
+        return fromValue*0.00006;
+        break;
+	case ILS:
+        return fromValue*0.23738;
+        break;
+	case JPY:
+        return fromValue*0.00766;
+        break;
+	case KRW:
+        return fromValue*0.00079;
+        break;
+    case MYR:
+        return fromValue*0.21408;
+        break;
+	case MXN:
+        return fromValue*0.04268;
+        break;
+	case NZD:
+        return fromValue*0.58764;
+        break;
+	case NOK:
+        return fromValue*0.10514;
+        break;
+	case PKR:
+        return fromValue*0.00736;
+        break;
+    case PHP:
+        return fromValue*0.01625;
+        break;
+	case PLN:
+        return fromValue*0.23254;
+        break;
+	case RUB:
+        return fromValue*0.01365;
+        break;
+	case SGD:
+        return fromValue*0.63338;
+        break;
+	case ZAR:
+        return fromValue*0.06648;
+        break;
+    case SEK:
+        return fromValue*0.09728;
+        break;
+	case CHF:
+        return fromValue*0.85227;
+        break;
+	case TWD:
+        return fromValue*0.02841;
+        break;
+	case THB:
+        return fromValue*0.02643;
+        break;
+	case TRY:
+        return fromValue*0.18726;
+        break;
+	case USD:
+        return fromValue*0.85220;
+        break;
+    default:
+        alert("Inserire valuta!");
+	}
+}
+function toNew(toValue){
+	switch(fromValue) {
+    case AUD:
+        return fromValue*0.64102;
+        break;
+    case BRL:
+        return fromValue*0.22792;
+        break;
+	case GBP:
+        return fromValue*1.14225;
+        break;
+	case CAD:
+        return fromValue*0.66256;
+        break;
+	case CLP:
+        return fromValue*0.00134;
+        break;
+	case CNY:
+        return fromValue*0.13337;
+        break;
+    case CZK:
+        return fromValue*0.03899;
+        break;
+	case DKK:
+        return fromValue*0.13428;
+        break;
+	case EUR:
+        return fromValue;
+        break;
+	case HKD:
+        return fromValue*0.10855;
+        break;
+	case HUF:
+        return fromValue*0.00314;
+        break;
+    case INR:
+        return fromValue*0.01252;
+        break;
+	case IDR:
+        return fromValue*0.00006;
+        break;
+	case ILS:
+        return fromValue*0.23738;
+        break;
+	case JPY:
+        return fromValue*0.00766;
+        break;
+	case KRW:
+        return fromValue*0.00079;
+        break;
+    case MYR:
+        return fromValue*0.21408;
+        break;
+	case MXN:
+        return fromValue*0.04268;
+        break;
+	case NZD:
+        return fromValue*0.58764;
+        break;
+	case NOK:
+        return fromValue*0.10514;
+        break;
+	case PKR:
+        return fromValue*0.00736;
+        break;
+    case PHP:
+        return fromValue*0.01625;
+        break;
+	case PLN:
+        return fromValue*0.23254;
+        break;
+	case RUB:
+        return fromValue*0.01365;
+        break;
+	case SGD:
+        return fromValue*0.63338;
+        break;
+	case ZAR:
+        return fromValue*0.06648;
+        break;
+    case SEK:
+        return fromValue*0.09728;
+        break;
+	case CHF:
+        return fromValue*0.85227;
+        break;
+	case TWD:
+        return fromValue*0.02841;
+        break;
+	case THB:
+        return fromValue*0.02643;
+        break;
+	case TRY:
+        return fromValue*0.18726;
+        break;
+	case USD:
+        return fromValue*0.85220;
+        break;
+    default:
+        alert("Inserire valuta!");
+	}
+}
