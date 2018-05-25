@@ -265,4 +265,5 @@ function toNew(toValue){
     default:
         alert("Inserire valuta!");
 	}
+	//http://openexchangerates.github.io/money.js/
 }
