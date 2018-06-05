@@ -29,13 +29,13 @@ and open the template in the editor.
 			var consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z', 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 			var alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-			cognome = "";
-			nome = "";
-			dNascita;
-			lNascita;
-			outCF = "";
-			sesso = true; //true=maschio false=femmina
-			comune = "";
+			var cognome = "";
+			var nome = "";
+			var dNascita;
+			var lNascita;
+			var outCF = "";
+			var sesso = true; //true=maschio false=femmina
+			var comune = "";
 
 			function findConsCog() {
 				found = "";
@@ -436,7 +436,8 @@ and open the template in the editor.
 				}
 				outCF = outCF.concat(findCodiceComune());
 				OUTcf = outCF.concat(findCIN());
-				document.getElementById("Codice").value = OUTcf;
+                                alert(OUTcf);
+				//document.getElementById("Codice").value = OUTcf;
 			}
 
 			function setName() {

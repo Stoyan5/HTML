@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+    background-image: url("white_leather.png");
+}
+
+li {
+  list-style-type: none;
+}
+
+div.thumbnail{
+    background-color: whitesmoke;
+    margin: 10px;
+    height: 450px;
+    width: 400px;
+}
